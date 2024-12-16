@@ -8,7 +8,7 @@ Es kombiniert einen Arduino Mega 2560, ein RFID-Modul, LEDs, ein LCD-Display und
 Das System bietet folgende Funktionen:
 - Erkennung von RFID-Karten.
 - Visuelle und textuelle Rückmeldung über LEDs und LCD.
-- Automatisches Öffnen und Schließen einer Tür mithilfe eines Servos.
+- Automatisches Öffnen und Schliessen einer Tür mithilfe eines Servos.
 - Erweiterbarkeit durch Hinzufügen neuer RFID-Karten.
 
 
@@ -33,13 +33,13 @@ Software
 
 Anforderungen
 - Arduino IDE (Version 1.8.0 oder neuer).
-- Die oben genannten Hardware-Komponenten korrekt gemäß dem Schaltplan anschließen.
+- Die oben genannten Hardware-Komponenten korrekt gemäss dem Schaltplan anschliessen.
 - Benötigte Bibliotheken installieren (via Bibliotheksmanager in der Arduino IDE).
 
 
 Installation und Einrichtung
 1. Hardware aufbauen:
-   - RFID-Modul, LEDs, LCD-Display und Servo gemäß Schaltplan mit dem Arduino verbinden.
+   - RFID-Modul, LEDs, LCD-Display und Servo gemäss Schaltplan mit dem Arduino verbinden.
     - PIN-Zuweisungen in der Software überprüfen:
       #define SS_PIN 53
       #define RST_PIN 5
@@ -78,7 +78,7 @@ Funktionsweise
 2. Autorisiert:
     - Grüne LED leuchtet.
     - Der Servo öffnet die Tür für 3 Sekunden.
-    - Begrüßung wird auf dem LCD angezeigt.
+    - Begrüssung wird auf dem LCD angezeigt.
 
 3. Nicht autorisiert:
     - Rote LED leuchtet.
@@ -110,12 +110,12 @@ Erweiterung und Anpassung
   LiquidCrystal_I2C lcd(0x27, 16, 2); // Adresse ändern, z. B. auf 0x3F
 
   Servo-Anpassungen:
-  Servowinkel für Türöffnungs- und Schließpositionen anpassen:
-  tuerServo.write(90);  // ÖffnentuerServo.write(0);   // Schließen
+  Servowinkel für Türöffnungs- und Schliesspositionen anpassen:
+  tuerServo.write(90);  // ÖffnentuerServo.write(0);   // Schliessen
 
 Testprotokoll
   Autorisiert:
-  Grüne LED leuchtet, LCD zeigt Begrüßung, Servo öffnet die Tür.
+  Grüne LED leuchtet, LCD zeigt Begrüssung, Servo öffnet die Tür.
   
   Nicht autorisiert:
   Rote LED leuchtet, LCD zeigt "Karte ungültig".
